@@ -1,20 +1,15 @@
 package edu.dmacc.codedsm.bakeryss;
 
-import java.util.Arrays;
+import edu.dmacc.codedsm.bakeryss.delivery.Car;
+import edu.dmacc.codedsm.bakeryss.delivery.Vehicle;
 
 public class Runner {
 
     public static void main(String[] args) {
-        Bakery natesBakery = new Bakery();
-        System.out.println("natesBakery = " + natesBakery);
-
-        Bakery pamsBakery =
-            new Bakery(Arrays.asList(),
-                    Arrays.asList("Pam"),
-                    Arrays.asList(),
-                    100000000.0d,
-                    false);
-        System.out.println("pamsBakery = " + pamsBakery);
+        processVehicle(new Car());
     }
 
+    public static void processVehicle(Vehicle v) {
+        v.drive(10);
+    }
 }

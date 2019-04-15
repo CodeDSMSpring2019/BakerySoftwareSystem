@@ -1,10 +1,10 @@
-package edu.dmacc.codedsm.bakeryss;
+package edu.dmacc.codedsm.bakeryss.bakery;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Bakery {
+public abstract class Bakery {
 
     private List<String> equipment;
     private List<String> employees;
@@ -27,6 +27,8 @@ public class Bakery {
         this.cashOnHand = cashOnHand;
         this.isOpen = isOpen;
     }
+
+    public abstract List<String> bakeTheGoods();
 
     public Boolean openTheStore(String employeeName) {
         return false;
